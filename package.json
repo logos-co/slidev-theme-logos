@@ -1,0 +1,12 @@
+{
+  "name": "slidev-theme-logos",
+  "version": "0.1.0",
+  "description": "Logos brand theme for Slidev",
+  "engines": {
+    "node": ">=18.0.0",
+    "slidev": ">=0.48.0"
+  },
+  "slidev": {
+    "colorSchema": "light"
+  }
+}
