@@ -30,7 +30,7 @@
   --font-heading: 'Times', Times, Georgia, serif;
   --font-display: 'Gowun Batang', Georgia, serif;
   --font-body: var(--font-heading);
-  --font-code: 'Fira Code', Consolas, 'Courier New', monospace;
+  --font-code: 'JetBrains Mono', Consolas, 'Courier New', monospace;
 
   /* Spacing - 5% margins minimum */
   --screen-margin: 2.5rem;
@@ -43,6 +43,7 @@
   /* Border */
   --border-subtle: 1px solid var(--color-forest);
   --border-dark: 1px solid var(--color-sage);
+  --border-light: 1px solid var(--color-gray-02);
 }
 
 /* Dark scheme overrides */
@@ -58,8 +59,7 @@
   background: var(--color-warm-gray);
   color: var(--color-forest);
   font-family: var(--font-body);
-  padding: var(--screen-margin);
-  padding-bottom:  calc(var(--screen-margin) + 2.5rem) !important; /* footer height */
+  padding: var(--screen-margin) !important;
   line-height: 1.5;
 
   /* Typography - Official Brand Type Scale */
@@ -111,6 +111,14 @@
     color: var(--color-coral);
   }
 
+  .highlight {
+    color: var(--color-coral);
+  }
+
+  .belittle {
+    color: var(--color-muted);
+  }
+
   /* Code */
   code {
     font-family: var(--font-code);
@@ -132,6 +140,8 @@
     background: var(--color-forest) !important;
     color: var(--color-white);
     padding: 1.25rem !important;
+    white-space: pre-wrap;
+    word-wrap: break-word;
   }
 
   /* Tables */
@@ -183,8 +193,19 @@
 
   li {
     display: list-item !important;
-    padding-left: 0;
-    margin-left: 0;
+  }
+
+  li > p {
+    display: inline;
+    margin: 0;
+  }
+
+  li > pre {
+    margin-left: 1.15em;
+  }
+
+  li > p + pre {
+    margin-top: 0.5rem;
   }
 
   li::marker {
@@ -198,6 +219,11 @@
     border-top: var(--border-subtle);
     margin: var(--space-lg) 0;
   }
+}
+
+/* Add footer padding only for slides with footer: true */
+.slidev-layout[data-footer="true"] {
+  padding-bottom: calc(var(--screen-margin) + 2.5rem) !important; /* footer height */
 }
 
 /* Slide number */

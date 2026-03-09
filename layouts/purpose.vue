@@ -1,9 +1,9 @@
 <template>
-  <div class="slidev-layout logos-two-cols">
-    <div class="logos-two-cols-header">
+  <div class="slidev-layout logos-two-panels">
+    <div class="logos-two-panels-header">
       <slot name="default" />
     </div>
-    <div class="logos-two-cols-container">
+    <div class="logos-two-panels-container">
       <div class="logos-col logos-col-left">
         <slot name="left" />
       </div>
@@ -15,7 +15,7 @@
 </template>
 
 <style scoped>
-.logos-two-cols {
+.logos-two-panels {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -23,20 +23,26 @@
   position: relative;
 }
 
-.logos-two-cols-header {
-  margin-bottom: 0rem;
+.logos-two-panels-header {
+  margin-bottom: 1rem;
 }
 
-.logos-two-cols-container {
+.logos-two-panels-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.0rem;
+  gap: 3.5rem;
   flex: 1;
 }
 
 .logos-col {
   overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
+.logos-two-panels :deep(p) {
+  font-size: 1.6rem;
+}
 
 </style>
