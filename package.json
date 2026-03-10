@@ -1,6 +1,6 @@
 {
   "name": "@logos-co/slidev-theme-logos",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Logos brand theme for Slidev",
   "author": "Logos <https://logos.co>",
   "license": "MIT",
@@ -21,6 +21,7 @@
     "colorSchema": "light"
   },
   "files": [
+    "components",
     "layouts",
     "setup",
     "styles",
