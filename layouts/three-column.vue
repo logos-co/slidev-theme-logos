@@ -1,7 +1,3 @@
-<script setup>
-import Header from './header.vue';
-</script>
-
 <template>
   <div class="slidev-layout logos-three-cols">
     <slot name="header" />

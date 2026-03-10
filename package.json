@@ -1,12 +1,35 @@
 {
-  "name": "slidev-theme-logos",
+  "name": "@logos-co/slidev-theme-logos",
   "version": "0.1.0",
   "description": "Logos brand theme for Slidev",
+  "author": "Logos <https://logos.co>",
+  "license": "MIT",
+  "keywords": [
+    "slidev-theme",
+    "slidev"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/logos-co/slidev-theme-logos"
+  },
+  "homepage": "https://github.com/logos-co/slidev-theme-logos",
   "engines": {
     "node": ">=18.0.0",
     "slidev": ">=0.48.0"
   },
   "slidev": {
     "colorSchema": "light"
+  },
+  "files": [
+    "layouts",
+    "setup",
+    "styles",
+    "global-top.vue"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@slidev/types": "^52.14.1"
   }
 }
